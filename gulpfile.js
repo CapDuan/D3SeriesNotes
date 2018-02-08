@@ -10,12 +10,14 @@ gulp.task('browser-sync', function () {
         server: {
             baseDir: './'
         },
-        startPath: './front_src/series/series1/series1.html'
+        startPath: './front_src/series/series2/series2.html'
     });
 });
 
 gulp.task('watch', function () {
     gulp.watch('./front_src/series/series1/series1.html', browserSync.reload);
     gulp.watch('./front_src/series/series1/series1.js', browserSync.reload);
+    gulp.watch('./front_src/series/series2/series2.html', browserSync.reload);
+    gulp.watch('./front_src/series/series2/series2.js', browserSync.reload);
 });
 gulp.task('default', ['browser-sync', 'watch']);
